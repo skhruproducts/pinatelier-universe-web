@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ReactNode } from "react";
 import { ArrowDown, Check, MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import dossierImage from "@/assets/pinatelier-dossier.jpg";
@@ -122,6 +122,6 @@ function Index() {
   );
 }
 
-function Eyebrow({ children, className = "" }: { children: React.ReactNode; className?: string }) { return <div className={`font-mono text-[10px] uppercase tracking-[0.18em] text-primary ${className}`}>{children}</div>; }
+function Eyebrow({ children, className = "" }: { children: ReactNode; className?: string }) { return <div className={`font-mono text-[10px] uppercase tracking-[0.18em] text-primary ${className}`}>{children}</div>; }
 
-function Service({ number, title, children }: { number: string; title: string; children: React.ReactNode }) { return <article className="col-span-12 border-l border-foreground pl-7 md:col-span-4"><span className="font-mono text-xs text-primary">({number})</span><h3 className="mt-8 font-display text-3xl uppercase">{title}</h3><p className="mt-4 max-w-[34ch] text-sm leading-relaxed text-foreground/70">{children}</p></article>; }
+function Service({ number, title, children }: { number: string; title: string; children: ReactNode }) { return <article className="col-span-12 border-l border-foreground pl-7 md:col-span-4"><span className="font-mono text-xs text-primary">({number})</span><h3 className="mt-8 font-display text-3xl uppercase">{title}</h3><p className="mt-4 max-w-[34ch] text-sm leading-relaxed text-foreground/70">{children}</p></article>; }
